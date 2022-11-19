@@ -24,7 +24,7 @@ let weather = {
       const { speed } = data.wind;
       const { country } = data.sys;
       
-      const  faren  = data.main.temp*9/5+32
+      const  faren  = (data.main.temp*9/5+32).toFixed(2);
       document.querySelector(".city").innerText = "Weather in " + name+ ", " + country;
       document.querySelector(".icon").src =
         "https://openweathermap.org/img/wn/" + icon + ".png";
